@@ -23,8 +23,8 @@ const Modall = (props) => {
         <form action="/action_page.php">
   <label for="img">Select image:</label>
   <input type="file" id="img" name="img" accept="image/*"/>
-  <input type="text" id="add-name" onChange={addtitle}/>
-  <input type="text" id="add-rate" onChange={addrate} /> 
+  <input type="text" id="add-name" onChange={addtitle} placeholder="enter name"/>
+  <input type="text" id="add-rate" onChange={addrate} placeholder="enter rate in " /> 
 </form>
         </ModalBody>
         <ModalFooter>

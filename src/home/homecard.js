@@ -4,8 +4,8 @@ import {
   CardTitle, CardSubtitle, Button, Container
 } from 'reactstrap';
 import '../movies/cardvideo.css'
-import './cardmovie.css'
-const Cardmovie = (props) => {
+
+const Homecard = (props) => {
  
   return (
     
@@ -26,4 +26,4 @@ const Cardmovie = (props) => {
   );
 };
 
-export default Cardmovie;
+export default Homecard;

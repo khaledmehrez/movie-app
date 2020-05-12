@@ -268,55 +268,56 @@ class Movie extends Component {
     //add the search body by rate and name
     let searchBodyBYrateAndname = (
       <body className="movieSearchBynameAndRate-body">
-        <div className="serch">
-        <input
-          type="text"
-          id="fname"
-          name="fname"
-          onChange={this.handlechange}
-        />
-         <div className="RATING-place">
-        <img
-          src={star}
-          alt="Smiley face"
-          height="42"
-          width="42"
-          onMouseOver={this.calculaterate1}
-        />
+      <div className="serch">
+      <input
+        type="text"
+        id="fname"
+        name="fname"
+        onChange={this.handlechange}
+      />
+       <div className="RATING-place">
+      <img
+        src={star}
+        alt="Smiley face"
+        height="42"
+        width="42"
+        onMouseOver={this.calculaterate1}
+      />
 
-        <img
-          src={star}
-          alt="Smiley face"
-          height="42"
-          width="42"
-          onMouseOver={this.calculaterate2}
-        />
-        <img
-          src={star}
-          alt="Smiley face"
-          height="42"
-          width="42"
-          onMouseOver={this.calculaterate3}
-        />
-        <img
-          src={star}
-          alt="Smiley face"
-          height="42"
-          width="42"
-          onMouseOver={this.calculaterate4}
-        />
-        <img
-          src={star}
-          alt="Smiley face"
-          height="42"
-          width="42"
-          onMouseOver={this.calculaterate5}
-        />
-        <button type="button" onClick={this.reset}>
-          retun to main page
-        </button>
-        </div>
-        </div>
+      <img
+        src={star}
+        alt="Smiley face"
+        height="42"
+        width="42"
+        onMouseOver={this.calculaterate2}
+      />
+      <img
+        src={star}
+        alt="Smiley face"
+        height="42"
+        width="42"
+        onMouseOver={this.calculaterate3}
+      />
+      <img
+        src={star}
+        alt="Smiley face"
+        height="42"
+        width="42"
+        onMouseOver={this.calculaterate4}
+      />
+      <img
+        src={star}
+        alt="Smiley face"
+        height="42"
+        width="42"
+        onMouseOver={this.calculaterate5}
+      />
+      <button type="button" onClick={this.reset}>
+        retun to main page
+      </button>
+      </div>
+      </div>
+        
         <div className="container movie-list">
           {searchBYrateAndnamearray.map((el) => (
             <Cardvideo state={el} deleting={this.deleting} addFavorite={this.props.addFavorite} />

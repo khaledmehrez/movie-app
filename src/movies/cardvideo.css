@@ -5,3 +5,9 @@
 .card-body{
     background-color: rgb(180,180,180)
 }
+.card-rate{
+    font-size: 50px;
+    color:goldenrod;
+    margin-left:15%;
+    
+}

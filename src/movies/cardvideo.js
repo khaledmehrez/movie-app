@@ -13,7 +13,7 @@ const Cardvideo = (props) => {
         <CardImg  top width="100%" src={props.state.moviepicture} />
         <CardBody class="card-body" >
           <CardTitle class="card-contenu" >{props.state.moviename}</CardTitle>
-          <CardSubtitle >{props.state.movierate}</CardSubtitle>
+          <CardSubtitle  ><span class="card-rate">{props.state.moviestar}</span></CardSubtitle>
           
           <Button >watch</Button>
           
