@@ -10,6 +10,7 @@ import darknight from "./movies/img/darkknight.jpg";
 import joker from "./movies/img/joker.jpg";
 
 import Favoris from "./favorite/favorite";
+import Description from "./description/description";
 let Tab=[
   {
     moviepicture: darknight,
@@ -82,20 +83,28 @@ let Tab=[
     moviestar:"***",
     i: 9,
   },
-  { moviepicture: hangoverimg, moviename: "spa", movierate: "1",moviestar:"*", i: 10 },
-  { moviepicture: hangoverimg, moviename: "mohi", movierate: "4",moviestar:"****", i: 10 },
+  { moviepicture: hangoverimg, moviename: "fight club", movierate: "5",moviestar:"*****", i: 10 },
+  { moviepicture: hangoverimg, moviename: "shutter island", movierate: "4",moviestar:"****", i: 10 },
 ]
 let favarr=[]
+let descriptionarray=[]
 
 class App extends Component {
   //add to fvorite
 addFavorite=(i)=>{
   favarr.push(Tab[i])
   console.log(favarr)
-  
-  
+ 
   
 }
+ //show description
+ showDescription=(i)=>{
+   
+  descriptionarray.unshift(Tab[i])
+  
+  console.log(descriptionarray)
+}
+
 
   render(){
   return (
@@ -103,8 +112,9 @@ addFavorite=(i)=>{
       <Navigationbar />
       <Switch>
       <Route path="/Home" exact render={(props) => (<Home  Tab={Tab}/>)} />
-      <Route path="/Movie" exact render={(props) => (<Movie  Tab={Tab} addFavorite={this.addFavorite}/>)} />
+      <Route path="/Movie" exact render={(props) => (<Movie  Tab={Tab} addFavorite={this.addFavorite} showDescription={this.showDescription}/>)} />
       <Route path="/favoris" exact render={(props) => (<Favoris  favarr={favarr}/>)} />
+      <Route path="/description" exact render={(props)=>(<Description descriptionarray={descriptionarray}/> )}/>
       </Switch>
       
     </div>

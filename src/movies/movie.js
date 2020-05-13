@@ -33,6 +33,12 @@ class Movie extends Component {
       Object.assign(this.state.addmoviearray, { movierate: newRate })
     );
   };
+  addstar=(e)=>{
+    let newStar = e.target.value;
+    this.setState(
+      Object.assign(this.state.addmoviearray, { moviestar: newStar })
+    );
+  }
   addmovieonclick = () => {
     let arrayStorage=this.state.movies.push(this.state.addmoviearray);
     localStorage.setItem('updateMovieArray', arrayStorage)
@@ -125,11 +131,12 @@ class Movie extends Component {
         </div>
         <div className="container movie-list">
           {this.state.movies.map((el) => (
-            <Cardvideo state={el} deleting={this.deleting} addFavorite={this.props.addFavorite} />
+            <Cardvideo state={el} deleting={this.deleting} addFavorite={this.props.addFavorite} showDescription={this.props.showDescription} />
           ))}
           <Modall
             addtitle={this.addtitle}
             addrate={this.addrate}
+            addstar={this.addstar}
             addmovieonclick={this.addmovieonclick}
           />
         </div>

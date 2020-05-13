@@ -32,7 +32,7 @@ const Navigationbar = (props) => {
               <Link to="/Movie"><NavLink href="/components/">Movie</NavLink></Link>
             </NavItem>
             <NavItem>
-              <Link to="/favoris">GitHub</Link>
+            <Link to="/favoris"><NavLink href="/components/">Favoris</NavLink></Link>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>

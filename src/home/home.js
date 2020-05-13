@@ -12,13 +12,15 @@ class Home extends Component {
   console.log(topMovie)
         return (
             <body class="body-home">
+              
                 <div class="cover">
 
                 </div>
+                <h1>Hight rated movies</h1>
             <div className="card-home">
             
            { topMovie.map((el) => (
-             <Cardvideo state={el}  />
+             <Homecard state={el}  />
            ))}
          </div>
          </body>

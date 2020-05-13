@@ -11,7 +11,7 @@
     background-position: center;
     background-size: cover;
     width: 100%;
-    
+    background-color: rgba(128, 128, 128, 0.733);
 }
 .movieSearchbyName-body{
     background-image: url(./img/background-searchbyname.jpg) ; 
