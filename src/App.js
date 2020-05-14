@@ -8,9 +8,18 @@ import { Switch,Route } from 'react-router-dom';
 import hangoverimg from "./movies/img/the-hangover.jpg";
 import darknight from "./movies/img/darkknight.jpg";
 import joker from "./movies/img/joker.jpg";
-
+import disastermovie from "./movies/img/disastermovie.jpg";
+import shawshank from "./movies/img/shawshank.jpg"
+import transporter from "./movies/img/transporter.jpg"
+import godfather from "./movies/img/godfather.jpg"
+import shutter from"./movies/img/shutter.jpg"
+import fight from"./movies/img/fight.jpg"
+import save from"./movies/img/save.jpg"
 import Favoris from "./favorite/favorite";
 import Description from "./description/description";
+import Signup from "./signUp/signUp";
+import Signin from "./sign-in/signIn";
+import Thank from"./thank/thank";
 let Tab=[
   {
     moviepicture: darknight,
@@ -25,27 +34,31 @@ let Tab=[
     moviename: "joker",
     movierate: "5",
     moviestar:"*****",
+    description:"In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker.",
     i: 1,
   },
   {
-    moviepicture: hangoverimg,
+    moviepicture: shawshank,
     moviename: "The shawshank redemption",
     movierate: "5",
     moviestar:"*****",
+    description:"Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
     i: 2,
   },
   {
-    moviepicture: hangoverimg,
-    moviename: "hangover",
+    moviepicture: disastermovie,
+    moviename: "disastermovie",
     movierate: "2",
     moviestar:"**",
+    description:"Over the course of one evening, an unsuspecting group of twenty-somethings find themselves bombarded by a series of natural disasters and catastrophic events.",
     i: 3,
   },
   {
-    moviepicture: hangoverimg,
-    moviename: "hangover",
+    moviepicture: transporter,
+    moviename: "transpoter",
     movierate: "3",
     moviestar:"***",
+    description:"Frank Martin, who transports packages for unknown clients, is asked to move a package that soon begins moving, and complications arise.",
     i: 4,
   },
   {
@@ -53,41 +66,46 @@ let Tab=[
     moviename: "hangover",
     movierate: "4",
     moviestar:"****",
+    description:"Three buddies wake up from a bachelor party in Las Vegas, with no memory of the previous night and the bachelor missing. They make their way around the city in order to find their friend before his wedding.",
     i: 5,
   },
   {
-    moviepicture: hangoverimg,
-    moviename: "hangover",
+    moviepicture: godfather,
+    moviename: "godfather",
     movierate: "5",
     moviestar:"*****",
+    description:"The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
     i: 6,
   },
   {
-    moviepicture: hangoverimg,
-    moviename: "hangover",
-    movierate: "2",
-    moviestar:"**",
+    moviepicture: save,
+    moviename: "save mask",
+    movierate: "1",
+    moviestar:"*",
+    description:"His annual Christmas party faltering thanks to his cynical brother-in-law, former Growing Pains star Kirk Cameron attempts to save the day by showing him that Jesus Christ remains a crucial component of the over-commercialized holiday..",
     i: 7,
   },
   {
-    moviepicture: hangoverimg,
-    moviename: "hangover",
-    movierate: "1",
-    moviestar:"*",
+    moviepicture: shutter,
+    moviename: "Shutter island",
+    movierate: "4",
+    moviestar:"****",
+    description:"In 1954, a U.S. Marshal investigates the disappearance of a murderer who escaped from a hospital for the criminally insane.",
     i: 8,
   },
   {
-    moviepicture: hangoverimg,
-    moviename: "hangoveyr",
-    movierate: "",
-    moviestar:"***",
+    moviepicture:fight  ,
+    moviename: "fight club",
+    movierate: "5",
+    moviestar:"*****",
+    description:"An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.",
     i: 9,
   },
-  { moviepicture: hangoverimg, moviename: "fight club", movierate: "5",moviestar:"*****", i: 10 },
-  { moviepicture: hangoverimg, moviename: "shutter island", movierate: "4",moviestar:"****", i: 10 },
+  
 ]
 let favarr=[]
 let descriptionarray=[]
+
 
 class App extends Component {
   //add to fvorite
@@ -105,16 +123,22 @@ addFavorite=(i)=>{
   console.log(descriptionarray)
 }
 
+  
+
 
   render(){
   return (
     <div className="App">
       <Navigationbar />
       <Switch>
+        
       <Route path="/Home" exact render={(props) => (<Home  Tab={Tab}/>)} />
-      <Route path="/Movie" exact render={(props) => (<Movie  Tab={Tab} addFavorite={this.addFavorite} showDescription={this.showDescription}/>)} />
+      <Route path="/Movie" exact render={(props) => (<Movie  Tab={Tab} addFavorite={this.addFavorite} showDescription={this.showDescription} />)} />
       <Route path="/favoris" exact render={(props) => (<Favoris  favarr={favarr}/>)} />
       <Route path="/description" exact render={(props)=>(<Description descriptionarray={descriptionarray}/> )}/>
+      <Route path="/signup" component={Signup} />
+      <Route path="/signin" component={Signin} />
+      <Route path="/thank" component={Thank} />
       </Switch>
       
     </div>

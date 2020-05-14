@@ -4,7 +4,7 @@ import star from "./img/star.png";
 import hangoverimg from "./img/the-hangover.jpg";
 import Cardvideo from "./cardvideo";
 import Modall from "./addmovie";
-
+let a=0
 class Movie extends Component {
   constructor(props) {
     super(props);
@@ -19,7 +19,13 @@ class Movie extends Component {
  
   
   //add movies
+addpicture=(e)=>{
+let url=e.target.value
+this.setState(
+  Object.assign(this.state.addmoviearray, { moviepicture: url })
+);
 
+}
   addtitle = (e) => {
     let newMoviename = e.target.value;
     this.setState(
@@ -45,9 +51,20 @@ class Movie extends Component {
     this.forceUpdate();
     console.log(this.state.movies);
   };
-  //delete item from movie
-  deleting = (i) => {
-   console.log(this.state.movies[i])
+  //delete movie
+   deleting = (i) => {
+    
+    const items = this.state.movies.filter(item => item.i !== i);
+    this.setState({movies :items})
+    console.log(this.state.movies)
+  //   this.state.movies.splice(i-a,1)
+  //   this.forceUpdate();
+  
+    
+  // a++
+  
+  
+  
   };
   //create the search variable
   handlechange = (e) => {
@@ -131,9 +148,10 @@ class Movie extends Component {
         </div>
         <div className="container movie-list">
           {this.state.movies.map((el) => (
-            <Cardvideo state={el} deleting={this.deleting} addFavorite={this.props.addFavorite} showDescription={this.props.showDescription} />
+            <Cardvideo state={el} deleting={this.deleting} addFavorite={this.props.addFavorite} showDescription={this.props.showDescription}  />
           ))}
           <Modall
+          addpicture={this.addpicture}
             addtitle={this.addtitle}
             addrate={this.addrate}
             addstar={this.addstar}

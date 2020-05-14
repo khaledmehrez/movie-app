@@ -1,0 +1,11 @@
+.titledescription{
+    margin-top: 5%;
+}
+.movie-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top:10%;
+}
+.text-movie{
+    margin-top:15%;
+}

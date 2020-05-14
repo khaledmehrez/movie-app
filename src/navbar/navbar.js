@@ -29,30 +29,19 @@ const Navigationbar = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <Link to="/Movie"><NavLink href="/components/">Movie</NavLink></Link>
+              <Link to="/Movie"><NavLink>Movie</NavLink></Link>
             </NavItem>
             <NavItem>
-            <Link to="/favoris"><NavLink href="/components/">Favoris</NavLink></Link>
+            <Link to="/favoris"><NavLink >Favoris</NavLink></Link>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Options
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                  Option 1
-                </DropdownItem>
-                <DropdownItem>
-                  Option 2
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  Reset
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
+            
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          
+              <Link to="/signin"><NavLink >Sign-in</NavLink></Link>
+            
+          
+              <Link to="/signup"><NavLink >Sign-up</NavLink></Link>
+            
         </Collapse>
       </Navbar>
     </div>

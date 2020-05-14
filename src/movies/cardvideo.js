@@ -5,6 +5,7 @@ import {
 } from 'reactstrap';
 import './cardvideo.css'
 import { Link } from 'react-router-dom';
+import Edit from './edit';
 const Cardvideo = (props) => {
   const key=props.state.i
   
@@ -20,6 +21,7 @@ const Cardvideo = (props) => {
           
           <Button onClick={()=>props.deleting(key)}  >X</Button>
           <Button  onClick={()=>props.addFavorite(key)} >+</Button>
+          
         </CardBody>
       </Card>
     
@@ -27,3 +29,4 @@ const Cardvideo = (props) => {
 };
 
 export default Cardvideo;
+//onClick={()=>props.deleting(key)}

@@ -8,7 +8,8 @@ const Modall = (props) => {
     addtitle,
     addrate,
     addmovieonclick,
-    addstar
+    addstar,
+    addpicture
   } = props;
   
   const [modal, setModal] = useState(false);
@@ -23,7 +24,7 @@ const Modall = (props) => {
         <ModalBody>
         <form action="/action_page.php">
   <label for="img">Select image:</label>
-  <input type="file" id="img" name="img" accept="image/*"/>
+  <input type="text" id="add-picture" onChange={addpicture} placeholder="enter url"/>
   <input type="text" id="add-name" onChange={addtitle} placeholder="enter name"/>
   <input type="text" id="add-rate" onChange={addrate} placeholder="enter rate in number " /> 
   <input type="text" id="add-rate" onChange={addstar} placeholder="enter rate in stars " /> 
