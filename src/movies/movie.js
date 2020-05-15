@@ -13,6 +13,7 @@ class Movie extends Component {
       search: "",
       rate: "",
       addmoviearray: {},
+      titlechanging:""
     };
   }
   
@@ -66,6 +67,18 @@ this.setState(
   
   
   };
+  //edit movie
+  handlechangename=(e)=>{
+    let modifiedTitle=e.target.value
+    
+    this.setState({titlechanging:modifiedTitle})
+  }
+  edit=(i)=>{
+    this.setState(
+      Object.assign(this.state.movies[i], { moviename: this.state.titlechanging })
+    );
+    console.log(this.state.movies[i])
+  }
   //create the search variable
   handlechange = (e) => {
     this.setState({ search: e.target.value });
@@ -97,6 +110,7 @@ this.setState(
     //create the initial body without search
     let initialBody = (
       <body className="movie-body">
+        
         <div className="serch">
         <input
           type="text"
@@ -148,7 +162,7 @@ this.setState(
         </div>
         <div className="container movie-list">
           {this.state.movies.map((el) => (
-            <Cardvideo state={el} deleting={this.deleting} addFavorite={this.props.addFavorite} showDescription={this.props.showDescription}  />
+            <Cardvideo state={el} deleting={this.deleting} addFavorite={this.props.addFavorite} showDescription={this.props.showDescription} handlechangename={this.handlechangename} edit={this.edit} />
           ))}
           <Modall
           addpicture={this.addpicture}

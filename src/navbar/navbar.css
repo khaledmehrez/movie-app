@@ -1,4 +1,10 @@
 .navbar{
-  
+    height:15vh;
     
+}
+.logout{
+    display:none;
+}
+.header-navbar{
+   
 }

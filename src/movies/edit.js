@@ -6,25 +6,29 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter,InputGroup, InputGro
 const Edit = (props) => {
   const {
     buttonLabel,
-    className
+    className,
+    
+    state,
+    handlechangename,
+    edit
   } = props;
-
+  const key=state.i
   const [modal, setModal] = useState(false);
 
   const toggle = () => setModal(!modal);
 
   return (
     <div>
-      <Button color="danger" onClick={toggle}>{buttonLabel}</Button>
+      <Button color="danger" onClick={toggle}>{buttonLabel} edit</Button>
       <Modal isOpen={modal} toggle={toggle} className={className}>
         <ModalHeader toggle={toggle}>Modal title</ModalHeader>
         <ModalBody>
-        <Input type="text"  placeholder="with a placeholder" />
+        <Input type="text" onChange={handlechangename} placeholder="edit title" />
       <br />
       
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={toggle}>Do Something</Button>{' '}
+          <Button color="primary" onClick={toggle}  onClick={()=>edit(key)} >Do Something</Button>{' '}
           <Button color="secondary" onClick={toggle}>Cancel</Button>
         </ModalFooter>
       </Modal>

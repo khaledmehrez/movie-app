@@ -16,7 +16,7 @@ class Home extends Component {
                 <div class="cover">
 
                 </div>
-                <h1>Hight rated movies</h1>
+                <h1 className="home-title">Hight rated movies</h1>
             <div className="card-home">
             
            { topMovie.map((el) => (

@@ -1,3 +1,8 @@
 .moviecard{
     
 }
+@media only screen and (max-width: 650px) {
+    .moviecard{
+       width:20rem;
+    }
+  }

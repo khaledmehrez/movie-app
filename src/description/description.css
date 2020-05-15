@@ -1,11 +1,35 @@
 .titledescription{
-    margin-top: 5%;
+    margin-top:10%;
+    text-align: center;
+    color: white;
+    background-color: rgb(58,68,131);
+    height:20vh;
+    padding:2%;
+    
 }
 .movie-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-top:10%;
 }
 .text-movie{
-    margin-top:15%;
+    text-align: justify;
+  
+  width:400px;
+  margin-top:10%;
+  font-weight: bold;
+}
+.description-photo{
+    height:500px;
+     width:50%;
+}
+.des-rate{
+    font-size: 50px;
+   text-align: center;
+   color:blue;
+}
+.description-rate{
+    font-size:xx-large;
+    color:goldenrod;
+    text-align: center;
 }

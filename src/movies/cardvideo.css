@@ -10,7 +10,7 @@
    
 }
 .moviecard:hover{
-
+color:whitesmoke;
 }
 .card-body{
     background-color: rgb(180,180,180);
@@ -21,4 +21,16 @@
     color:goldenrod;
     margin-left:15%;
     
+}
+.video-bouton{
+   display: grid;
+   grid-template-columns: auto auto ;
+    grid-row-gap: 20px;
+    
+}
+#plusbtn{
+    width:80%;
+}
+#cardfilm-title{
+    margin-left:20px;
 }

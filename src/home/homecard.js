@@ -4,6 +4,7 @@ import {
   CardTitle, CardSubtitle, Button, Container
 } from 'reactstrap';
 import '../movies/cardvideo.css'
+import "./homecard.css"
 
 const Homecard = (props) => {
  

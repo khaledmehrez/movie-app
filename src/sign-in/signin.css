@@ -1,0 +1,26 @@
+.sign-inform{
+    color:red;
+    font-weight: bold;
+    
+    width:50%;
+    margin-left:25%;
+    padding:10%;
+    
+    
+}
+.sign-input{
+    background-color:white;
+    box-shadow: 1px 1px 0px rgb(180,180,180),
+    2px 2px 0px rgb(180,180,180),
+    3px 3px 0px rgb(180,180,180),
+    4px 4px 0px rgb(180,180,180),
+    5px 5px 0px rgb(180,180,180),
+    6px 6px 0px rgb(180,180,180);
+   
+}
+.sign{
+    background-image: url(./img/backgound-sign.jpg);
+    background-size: cover;
+    height:100vh;
+   
+}

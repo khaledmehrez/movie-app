@@ -20,6 +20,7 @@ import Description from "./description/description";
 import Signup from "./signUp/signUp";
 import Signin from "./sign-in/signIn";
 import Thank from"./thank/thank";
+import Footer from "./footer/footer";
 let Tab=[
   {
     moviepicture: darknight,
@@ -100,6 +101,7 @@ let Tab=[
     moviestar:"*****",
     description:"An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.",
     i: 9,
+    
   },
   
 ]
@@ -107,7 +109,12 @@ let favarr=[]
 let descriptionarray=[]
 
 
+
 class App extends Component {
+  
+    
+    
+  
   //add to fvorite
 addFavorite=(i)=>{
   favarr.push(Tab[i])
@@ -123,19 +130,20 @@ addFavorite=(i)=>{
   console.log(descriptionarray)
 }
 
-  
 
 
   render(){
+    
   return (
     <div className="App">
-      <Navigationbar />
+    
+    <Navigationbar />
       <Switch>
         
       <Route path="/Home" exact render={(props) => (<Home  Tab={Tab}/>)} />
       <Route path="/Movie" exact render={(props) => (<Movie  Tab={Tab} addFavorite={this.addFavorite} showDescription={this.showDescription} />)} />
       <Route path="/favoris" exact render={(props) => (<Favoris  favarr={favarr}/>)} />
-      <Route path="/description" exact render={(props)=>(<Description descriptionarray={descriptionarray}/> )}/>
+      <Route path="/description" exact render={(props)=>(<Description descriptionarray={descriptionarray} /> )}/>
       <Route path="/signup" component={Signup} />
       <Route path="/signin" component={Signin} />
       <Route path="/thank" component={Thank} />
