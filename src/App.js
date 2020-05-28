@@ -21,6 +21,7 @@ import Signup from "./signUp/signUp";
 import Signin from "./sign-in/signIn";
 import Thank from"./thank/thank";
 import Footer from "./footer/footer";
+import Loader from "./loader/Loader";
 let Tab=[
   {
     moviepicture: darknight,
@@ -112,7 +113,7 @@ let descriptionarray=[]
 
 class App extends Component {
   
-    
+    state={load:true}
     
   
   //add to fvorite
@@ -131,10 +132,20 @@ addFavorite=(i)=>{
 }
 
 
+componentDidMount=()=>{
+  this.stoploader=
+    setInterval(()=>{this.setState({load:false})},2500)
+    console.log(this.state)
+  
+}
 
   render(){
-    
+    if (this.state.load){
+    return <Loader />}
+    else{
+     
   return (
+    
     <div className="App">
     
     <Navigationbar />
@@ -150,7 +161,8 @@ addFavorite=(i)=>{
       </Switch>
       
     </div>
-  );
+  );}
+    
   }
 }
 
